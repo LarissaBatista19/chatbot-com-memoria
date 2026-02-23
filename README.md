@@ -51,6 +51,24 @@ A chave pode ser obtida em: **https://aistudio.google.com/**
 
 #### 4️⃣ Execute o aplicativo
 
+Troque o seguite parte de app.py:
+
+```bash
+api_key = st.secrets["GEMINI_API_KEY"]
+```
+
+Por:
+
+```bash
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
+```
+
+Salve e execute no terminal:
+
 ```bash
 streamlit run app.py
 ```
@@ -62,17 +80,12 @@ Caso deseje rodar a aplicação no Colab com interface web:
 #### 1️⃣ Instale as dependências
 
 ```bash
-!pip install streamlit pyngrok google-genai
+!pip install streamlit pyngrok google-genai python-dotenv
 ```
 
-#### 2️⃣ Configure sua chave Gemini
+#### 2️⃣ Configure sua chave Gemini como na versão local
 
-```bash
-import os
-os.environ["GEMINI_API_KEY"] = "SUA_CHAVE_AQUI"
-```
-
-#### 3️⃣ Execute o app com túnel público
+#### 3️ Execute o app com túnel público
 
 ```bash
 from pyngrok import ngrok

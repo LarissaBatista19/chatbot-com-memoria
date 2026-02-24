@@ -103,3 +103,48 @@ subprocess.Popen(["streamlit", "run", "app.py"])
 
 E gerar um Authtoken no dashboard.
 
+## 🖥️ Versão com Ollama (Execução Local com Modelo Offline)
+
+Além da versão utilizando a API Gemini, o repositório também disponibiliza uma versão do chatbot utilizando Ollama, permitindo a execução local de um modelo de linguagem sem dependência de API externa. Comece clonando o repositório.
+
+#### 1️⃣ Instale o Ollama
+
+Faça o download em:
+
+👉 **https://ollama.com/**
+
+#### 2️⃣ Baixe o modelo Orca Mini
+
+```bash
+ollama pull orca-mini
+```
+
+#### 3️⃣ Execute o modelo
+
+```bash
+ollama run orca-mini
+```
+
+#### 4️⃣ Execute a versão do app com Ollama
+
+```bash
+python chatbot.py
+```
+
+Essa versão permite:
+
+Execução totalmente local
+
+Sem custo por requisição
+
+Independência de conexão com API externa
+
+⚠️ O desempenho pode variar dependendo do hardware utilizado.
+
+## 📚 Google Colab
+
+Também é possível executar o projeto diretamente no Google Colab:
+
+👉 **[Abrir no Google Colab](https://colab.research.google.com/drive/16510k0r98ikDSv6uwD80TpthXrqt2GoP?usp=sharing#scrollTo=VEOGG6cFlrds)**
+
+
